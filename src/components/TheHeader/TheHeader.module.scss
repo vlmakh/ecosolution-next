@@ -1,0 +1,90 @@
+// import styled from "@emotion/styled";
+// import { BtnLnkGreen } from "../Base/Base";
+// import ecoLogo from "public/images/eco_logo.png";
+// import ecoLogoLight from "public/images/eco_logo_light.png";
+@import "@/styles/_placeholders";
+@import "@/styles/_variables";
+
+.header   {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgb(243, 245, 250);
+  // ${(p) => p.offset == 0 ? "rgb(243, 245, 250)" : "rgba(200, 200, 200, 0.5)"};
+  z-index: 1;
+  backdrop-filter: blur(8px);
+
+  transition: background-color 250ms ease-in;
+}
+
+
+.header__cont {
+  display: flex;
+  justify-content: space-between;
+  padding: 36px 20px 8px;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: 768px) {
+    max-width: 768px;
+  }
+
+  @media (min-width: 1280px) {
+    max-width: 1280px;
+  }
+}
+
+
+.logoLink {
+  // background: url(${ecoLogo}) no-repeat;
+  width: 269px;
+
+  transition: all 250ms ease-in;
+
+  // :hover {
+    // background: url(${ecoLogoLight}) no-repeat;
+  // }
+}
+
+.nav 
+  {display: flex;}
+
+
+.menu
+  {display: inline-grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  padding: 0;
+  background-color: #dcefd8;
+  border-radius: 50%;
+  border: none;
+  color: #292d32;
+  cursor: pointer;
+
+  transition: background-color 250ms ease-in;
+
+  &:hover {
+    background-color: $color-accent;
+  }}
+
+
+.getInTouch 
+    {@extend %buttonLink;
+
+  margin-top: 0;
+  margin-left: 12px;
+
+  @media (max-width: 767.98px) {
+    display: none;
+  }}
+
+.round  {width: 14px;
+height: 14px;
+background-color: $color-main;
+border-radius: 50%;
+color: $color-accent;
+display: grid;
+place-content: center;}

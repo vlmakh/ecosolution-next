@@ -1,0 +1,27 @@
+@import "@/styles/_variables";
+
+%buttonLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  height: 40px;
+  padding: 0 16px;
+  margin-top: 12px;
+  text-decoration: none;
+  font-size: 16px;
+  color: $color-main;
+  background-color: $color-accent;
+  border: none;
+  border-radius: 500px;
+
+  transition: all 250ms ease-in;
+
+  &:hover {
+    color: $color-accent;
+    background-color: $color-main;
+  }
+
+  &:hover span {
+    background-color: $color-accent;
+  }
+}
