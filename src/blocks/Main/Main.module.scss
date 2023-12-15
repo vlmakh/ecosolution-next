@@ -1,0 +1,123 @@
+@import "@/styles/_placeholders";
+
+.main {
+  @extend %section;
+
+  margin-top: 222px;
+  padding-top: 0;
+
+  @media (min-width: 768px) {
+    margin-top: 240px;
+  }
+
+  @media (min-width: 1280px) {
+    margin-top: 264px;
+  }
+}
+
+.main__top {
+  @media (min-width: 768px) {
+    display: flex;
+    gap: 65px;
+  }
+}
+
+.main__title {
+  text-align: left;
+  font-size: 36px;
+  line-height: 36px;
+  font-weight: 400;
+  font-family: $font-title;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+
+  @media (min-width: 768px) {
+    font-size: 48px;
+    line-height: 48px;
+  }
+
+  @media (min-width: 1280px) {
+    font-size: 64px;
+    line-height: 64px;
+  }
+}
+
+.more {
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 3.5px 4px 3.5px 16px;
+  margin-top: 24px auto;
+  font-size: 16px;
+  color: $color-main;
+  background-color: transparent;
+  border: 1px solid $color-accent;
+  border-radius: 500px;
+
+  transition: all 250ms ease-in;
+
+  &:hover {
+    border: 1px solid $color-main;
+    color: $color-accent;
+    background-color: $color-main;
+  }
+}
+
+.arrow {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: $color-accent;
+  border-radius: 50%;
+  border: none;
+  color: #292d32;
+}
+
+.button__wrap {
+  text-align: center;
+  padding-top: 24px;
+  padding-bottom: 24px;
+
+  @media (min-width: 768px) {
+    text-align: justify;
+  }
+}
+
+.main__contacts {
+  padding-top: 24px;
+  list-style: none;
+  text-align: center;
+  border-top: 1px solid $color-accent;
+
+  & li {
+    :not(:first-of-type) {
+      @media (max-width: 767.98px) {
+        margin-top: 8px;
+      }
+    }
+
+    :last-of-type {
+      @media (max-width: 767.98px) {
+        display: none;
+      }
+    }
+  }
+
+  @media (min-width: 768px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.thumb {
+  margin-top: 36px;
+  display: flex;
+  justify-content: center;
+
+  @media (min-width: 768px) and (max-width: 1279.98px) {
+    margin-top: 40px;
+  }
+}
