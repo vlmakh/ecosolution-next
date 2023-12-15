@@ -3,8 +3,8 @@
 import css from "./TheHeader.module.scss";
 import { FiMenu } from "react-icons/fi";
 import { IoMdArrowRoundDown } from "react-icons/io";
-// import ecoLogo from "public/images/eco_logo.png";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 
 export const TheHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -26,7 +26,14 @@ export const TheHeader = () => {
   return (
     <header className={css.header}>
       <div className={css.header__cont}>
-        <a className={css.logoLink} href="#" />
+        <a className={css.logoLink} href="#">
+          <Image
+            src="/images/eco_logo.png"
+            alt="ecosolution"
+            width="269"
+            height="40"
+          />
+        </a>
         <nav className={css.nav}>
           <button
             className={css.menu}

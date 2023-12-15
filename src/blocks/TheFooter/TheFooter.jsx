@@ -1,46 +1,40 @@
-import ecoLogo from "@/assets/eco_logo.png";
-import {
-  Footer,
-  FooterContainer,
-  LogoBox,
-  ArrowLink,
-  Socials,
-  SocialLink,
-  List,
-  Item,
-} from "./TheFooter.styled";
 import { FaArrowUp, FaFacebook, FaInstagram } from "react-icons/fa";
-import { contacts } from "@/assets/contacts";
+import { contacts } from "@/data/contacts";
+import Image from "next/image";
+import css from "./TheFooter.module.scss";
 
 export const TheFooter = () => {
   return (
-    <Footer>
-      <FooterContainer>
-        <LogoBox>
-          <img src={ecoLogo} alt="ecosolution" width="269" />
-          
-          <ArrowLink href="#">
+    <footer className={css.footer}>
+      <div className={css.footer__cont}>
+        <div className={css.footer__logo}>
+          <Image
+            src="/images/eco_logo.png"
+            alt="ecosolution"
+            width="269"
+            height="40"
+          />
+
+          <a className={css.arrowUp} href="#">
             <FaArrowUp size="16" />
-          </ArrowLink>
+          </a>
 
-          <Socials>
-          <SocialLink href="http://facebook.com">
-            <FaFacebook size="24" />
-          </SocialLink>
-          <SocialLink href="http://instagram.com">
-            <FaInstagram size="24" />
-          </SocialLink>
-        </Socials>
-        </LogoBox>
+          <div className={css.socials}>
+            <a className={css.socials__link} href="http://facebook.com">
+              <FaFacebook size="24" />
+            </a>
+            <a className={css.socials__link} href="http://instagram.com">
+              <FaInstagram size="24" />
+            </a>
+          </div>
+        </div>
 
-        
-
-        <List>
-          <Item>{contacts.add}</Item>
-          <Item>{contacts.email}</Item>
-          <Item>{contacts.copyright}</Item>
-        </List>
-      </FooterContainer>
-    </Footer>
+        <ul className={css.contacts}>
+          <li className={css.contacts__item}>{contacts.add}</li>
+          <li className={css.contacts__item}>{contacts.email}</li>
+          <li className={css.contacts__item}>{contacts.copyright}</li>
+        </ul>
+      </div>
+    </footer>
   );
 };
