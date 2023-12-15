@@ -1,5 +1,30 @@
 @import "@/styles/_variables";
 
+%section {
+  text-align: justify;
+    margin-top: 36px;
+    max-width: 480px;
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    scroll-margin: 84px;
+  
+    @media (min-width: 768px) {
+      max-width: 768px;
+      margin-top: 100px;
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+  
+    @media (min-width: 1280px) {
+      max-width: 1280px;
+      margin-top: 120px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+}
+
 %buttonLink {
   display: inline-flex;
   align-items: center;
@@ -24,4 +49,14 @@
   &:hover span {
     background-color: $color-accent;
   }
+}
+
+%round {
+  width: 14px;
+    height: 14px;
+    background-color: $color-main;
+    border-radius: 50%;
+    color: $color-main;
+    display: grid;
+    place-content: center;
 }
