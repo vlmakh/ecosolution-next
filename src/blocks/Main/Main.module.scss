@@ -57,7 +57,7 @@
 
   transition: all 250ms ease-in;
 
-  &:hover {
+  &:hover, &:focus {
     border: 1px solid $color-main;
     color: $color-accent;
     background-color: $color-main;

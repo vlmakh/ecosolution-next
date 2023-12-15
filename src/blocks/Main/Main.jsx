@@ -1,6 +1,3 @@
-// import mainMob from "/images/main/main_mob.jpg";
-// import mainTab from "/images/main/main_tab.jpg";
-// import mainDesk from "/images/main/main_desk.jpg";
 import { FaArrowRight } from "react-icons/fa6";
 import { contacts } from "@/data/contacts";
 import Image from "next/image";
@@ -36,15 +33,24 @@ export const Main = () => {
         <li>{contacts.copyright}</li>
       </ul>
 
+      <div className={css.thumb}>
+        <Image
+          src="/images/main/main_desk.jpg"
+          alt="ecosolution"
+          width="1240"
+          height="524"
+        />
+      </div>
+
       {/* <picture className={css.thumb}>
-        <source srcSet={mainMob} media="(max-width: 767px)" sizes="320px" />
+        <source srcSet="/images/main/main_mob.jpg" media="(max-width: 767px)" sizes="320px" />
         <source
-          srcSet={mainTab}
+          srcSet="/images/main/main_tab.jpg"
           media="(min-width: 768px) and (max-width: 1199px)"
           sizes="708px"
         />
-        <source srcSet={mainDesk} media="(min-width: 1280px)" sizes="1240px" />
-        <Image src={mainMob} alt="ecosolution" />
+        <source srcSet="/images/main/main_desk.jpg" media="(min-width: 1280px)" sizes="1240px" />
+        <Image src="/images/main/main_mob.jpg" alt="ecosolution" />
       </picture> */}
     </section>
   );

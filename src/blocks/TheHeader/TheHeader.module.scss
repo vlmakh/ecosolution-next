@@ -64,7 +64,7 @@
 
   transition: background-color 250ms ease-in;
 
-  &:hover {
+  &:hover, &:focus {
     background-color: $color-accent;
   }
 }
