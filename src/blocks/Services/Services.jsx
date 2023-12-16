@@ -1,27 +1,25 @@
-import { Section, TitleCenter } from "../Base/Base";
-import { ServicesCont, WeProvide, List } from "./Services.styled";
+import css from "./Services.module.scss";
+import { services } from "@/data/services";
 
 export const Services = () => {
   return (
-    <Section id="services">
-      <TitleCenter>
+    <section className={css.services} id="services">
+      <h2 className={css.services__title}>
         The services <br /> we provide
-      </TitleCenter>
+      </h2>
 
-      <ServicesCont>
-        <WeProvide>
+      <div className={css.services__cont}>
+        <p className={css.services__text}>
           Development and implementation of renewable enviroMentally friendly
           energy sources
-        </WeProvide>
+        </p>
 
-        <List>
-          <li>Solar</li>
-          <li>Wind</li>
-          <li>Hydro</li>
-          <li>Thermal</li>
-          <li>Nuclear</li>
-        </List>
-      </ServicesCont>
-    </Section>
+        <ul className={css.services__list}>
+          {services.map((service, idx) => (
+            <li key={idx}>{service}</li>
+          ))}
+        </ul>
+      </div>
+    </section>
   );
 };
