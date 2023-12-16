@@ -31,7 +31,7 @@ export const Faq = () => {
                 onClick={() => handleClick(ind)}
               >
                 <p className={`${open === ind ? css.minus : css.plus}`}>
-                  {open === ind ? <FaMinus /> : <FaPlus />}
+                  {open === ind ? <FaMinus size="16" /> : <FaPlus size="16" />}
                 </p>
                 <h4>{item.question}</h4>
               </div>

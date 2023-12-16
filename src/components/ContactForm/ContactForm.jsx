@@ -1,14 +1,9 @@
-import { Formik } from "formik";
-import {
-  StyledForm,
-  StyledField,
-  Label,
-  StyledErrorMsg,
-  Send, InputNumber
-} from "./ContactForm.styled";
+import { Formik, Form, Field, ErrorMessage } from "formik";
+import css from "./ContactForm.module.scss";
 import { FaArrowRight } from "react-icons/fa6";
 import { ButtonArrow } from "../Base/Base";
 import * as yup from "yup";
+import InputMask from "react-input-mask";
 
 let schema = yup.object().shape({
   name: yup.string().min(3).required("Wrong Name"),
@@ -18,78 +13,78 @@ let schema = yup.object().shape({
 
 export const ContactForm = () => {
   return (
-    <>
-      <Formik
-        initialValues={{ name: "", email: "", phone: "", message: "" }}
-        validationSchema={schema}
-        onSubmit={(values, { setSubmitting, resetForm }) => {
-          setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
+    <Formik
+      initialValues={{ name: "", email: "", phone: "", message: "" }}
+      validationSchema={schema}
+      onSubmit={(values, { setSubmitting, resetForm }) => {
+        setTimeout(() => {
+          alert(JSON.stringify(values, null, 2));
+          setSubmitting(false);
+        }, 400);
 
-          resetForm();
-        }}
-      >
-        {({ isSubmitting }) => (
-          <StyledForm>
-            <p>* Full Name:</p>
-            <Label htmlFor="name">
-              <StyledField
-                name="name"
-                type="name"
-                placeholder="John Rosie"
-              ></StyledField>
-              <StyledErrorMsg component="div" name="name" />
-            </Label>
+        resetForm();
+      }}
+    >
+      {({ isSubmitting }) => (
+        <Form className={css.form}>
+          <p>* Full Name:</p>
+          <label className={css.label} htmlFor="name">
+            <Field
+              className={css.input}
+              name="name"
+              type="name"
+              placeholder="John Rosie"
+            ></Field>
+            <ErrorMessage className={css.error} component="div" name="name" />
+          </label>
 
-            <p>* E-mail:</p>
-            <Label htmlFor="email">
-              <StyledField
-                name="email"
-                type="email"
-                placeholder="johnrosie@gmail.com"
-              ></StyledField>
-              <StyledErrorMsg component="div" name="email" />
-            </Label>
+          <p>* E-mail:</p>
+          <label className={css.label} htmlFor="email">
+            <Field
+              className={css.input}
+              name="email"
+              type="email"
+              placeholder="johnrosie@gmail.com"
+            ></Field>
+            <ErrorMessage className={css.error} component="div" name="email" />
+          </label>
 
-            <p>* Phone:</p>
-            <Label htmlFor="phone">
-              <StyledField name="phone"         
-              >
-                  {({ field }) => (
-                  <InputNumber
-                    {...field}
-                    type="tel"
-                    mask="+99 999 999 9999"
-                    placeholder="+380961234567"
-                  />
-                )}
+          <p>* Phone:</p>
+          <label className={css.label} htmlFor="phone">
+            <Field className={css.input} name="phone">
+              {({ field }) => (
+                <InputMask
+                  className={css.mask}
+                  {...field}
+                  type="tel"
+                  mask="+99 999 999 9999"
+                  placeholder="+380961234567"
+                />
+              )}
+            </Field>
+            <ErrorMessage className={css.error} component="div" name="phone" />
+          </label>
 
-              </StyledField>
-              <StyledErrorMsg component="div" name="phone" />
-            </Label>
+          <p>Message:</p>
+          <label className={css.label} htmlFor="message">
+            <Field
+              className={css.input}
+              as="textarea"
+              name="message"
+              type="message"
+              rows="5"
+              placeholder="Your message"
+            ></Field>
+          </label>
 
-            <p>Message:</p>
-            <Label htmlFor="message">
-              <StyledField
-                as="textarea"
-                name="message"
-                type="message"
-                rows="5"
-                placeholder="Your message"
-              ></StyledField>
-            </Label>
-
-            <Send type="submit" disabled={isSubmitting}>
-              Send
-              <ButtonArrow>
-                <FaArrowRight />
-              </ButtonArrow>
-            </Send>
-          </StyledForm>
-        )}
-      </Formik>
-    </>
+          <button className={css.send} type="submit" disabled={isSubmitting}>
+            Send
+            <ButtonArrow>
+              <FaArrowRight />
+            </ButtonArrow>
+          </button>
+        </Form>
+      )}
+    </Formik>
   );
 };
