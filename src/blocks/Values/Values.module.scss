@@ -1,32 +1,38 @@
-import styled from "@emotion/styled";
-import { Title } from "../Base/Base";
+@import "@/styles/_variables";
+@import "@/styles/_placeholders";
 
-export const TitleValues = styled(Title)`
+.values {
+  @extend %section;
+}
+
+.values__title {
+  @extend %section__title;
+
   @media (min-width: 768px) {
     width: 50%;
     margin-bottom: 0;
   }
-`;
+}
 
-export const ValuesTop = styled.div`
+.values__top {
   @media (min-width: 768px) {
     display: flex;
   }
-`;
+}
 
-export const ValuesText = styled.p`
+.values__text {
   @media (min-width: 768px) {
     width: 50%;
     padding-left: 12px;
-    border-left: 1px solid ${(p) => p.theme.colors.accent};
+    border-left: 1px solid $color-accent;
   }
 
   @media (min-width: 1280px) {
     padding-left: 160px;
   }
-`;
+}
 
-export const List = styled.ul`
+.values__list {
   list-style: none;
   display: grid;
   grid-template-columns: 1fr;
@@ -40,29 +46,29 @@ export const List = styled.ul`
   @media (min-width: 1280px) {
     gap: 48px;
   }
-`;
+}
 
-export const Item = styled.li`
+.values__item {
   justify-self: center;
   display: flex;
   justify-content: space-between;
-  width: 342px;
+  max-width: 342px;
   gap: 24px;
 
   @media (min-width: 1280px) {
-    width: 596px;
+    max-width: 596px;
     gap: 48px;
   }
 
-  :nth-of-type(2),
-  :nth-of-type(3) {
+  &:nth-of-type(2),
+  &:nth-of-type(3) {
     @media (max-width: 767.98px) {
       display: none;
     }
   }
-`;
+}
 
-export const ValueCard = styled.div`
+.value__card {
   width: 148px;
   padding: 12px 14px;
   background-color: #eaedf1;
@@ -76,14 +82,14 @@ export const ValueCard = styled.div`
     width: 274px;
     font-size: 16px;
   }
-`;
+}
 
-export const Name = styled.h4`
+.value__name {
   text-transform: uppercase;
   padding-bottom: 32px;
   margin-bottom: 12px;
-  border-bottom: 1px solid ${(p) => p.theme.colors.accent};
-  font-family: ${(p) => p.theme.fonts.title};
+  border-bottom: 1px solid $color-accent;
+  font-family: $font-title;
   font-weight: 400;
 
   @media (min-width: 768px) {
@@ -99,4 +105,4 @@ export const Name = styled.h4`
       height: 24px;
     }
   }
-`;
+}
