@@ -1,7 +1,8 @@
+"use client";
+
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import css from "./ContactForm.module.scss";
 import { FaArrowRight } from "react-icons/fa6";
-import { ButtonArrow } from "../Base/Base";
 import * as yup from "yup";
 import InputMask from "react-input-mask";
 
@@ -79,9 +80,9 @@ export const ContactForm = () => {
 
           <button className={css.send} type="submit" disabled={isSubmitting}>
             Send
-            <ButtonArrow>
+            <span className={css.arrow}>
               <FaArrowRight />
-            </ButtonArrow>
+            </span>
           </button>
         </Form>
       )}

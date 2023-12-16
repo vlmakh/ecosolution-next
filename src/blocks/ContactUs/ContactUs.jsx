@@ -1,65 +1,61 @@
-import { Section, TitleCenter } from "../Base/Base";
-import {
-  ContactsContainer,
-  List,
-  Item,
-  ItemInfo,
-  Socials,
-  SocialLink,
-} from "./ContactUs.styled";
+import css from "./ContactUs.module.scss";
 import { FaFacebook, FaInstagram, FaRegMap } from "react-icons/fa";
 import { FaRegEnvelope } from "react-icons/fa6";
 import { BsTelephone } from "react-icons/bs";
-import { contacts } from "@/assets/contacts";
-import { ContactForm } from "../ContactForm/ContactForm";
+import { contacts } from "@/data/contacts";
+import { ContactForm } from "@/components/ContactForm/ContactForm";
 
 export const ContactUs = () => {
   return (
-    <Section id="contactus">
-      <TitleCenter>contact us</TitleCenter>
+    <section className={css.contacts} id="contactus">
+      <h2 className={css.contacts__title}>contact us</h2>
 
-      <ContactsContainer>
-        <List>
-          <Item>
+      <div className={css.contacts__cont}>
+        <ul className={css.contacts__list}>
+          <li>
             <p>Phone:</p>
 
-            <ItemInfo href={`tel:${contacts.phone1}`}>
+            <a className={css.info} href={`tel:${contacts.phone1}`}>
               <BsTelephone /> {contacts.phone1}
-            </ItemInfo>
+            </a>
 
-            <ItemInfo href={`tel:${contacts.phone2}`}>
+            <a className={css.info} href={`tel:${contacts.phone2}`}>
               <BsTelephone /> {contacts.phone2}
-            </ItemInfo>
-          </Item>
-          <Item>
+            </a>
+          </li>
+          <li>
             <p>E-mail:</p>
 
-            <ItemInfo href={`mailto:${contacts.email}`}>
+            <a className={css.info} href={`mailto:${contacts.email}`}>
               <FaRegEnvelope /> {contacts.email}
-            </ItemInfo>
-          </Item>
-          <Item>
+            </a>
+          </li>
+          <li>
             <p>Address:</p>
 
-            <ItemInfo href="https://maps.app.goo.gl/rvMVfG57WyaTB5Sm7" target="_blank">
+            <a
+              className={css.info}
+              href="https://maps.app.goo.gl/rvMVfG57WyaTB5Sm7"
+              target="_blank"
+            >
               <FaRegMap /> {contacts.add}
-            </ItemInfo>
-          </Item>
-          <Item>
+            </a>
+          </li>
+          <li>
             <p>Social Networks:</p>
-            <Socials>
-              <SocialLink href="http://facebook.com">
+            <div className={css.socials}>
+              <a className={css.socials__link} href="http://facebook.com">
                 <FaFacebook size="24" />
-              </SocialLink>
-              <SocialLink href="http://instagram.com">
+              </a>
+              <a className={css.socials__link} href="http://instagram.com">
                 <FaInstagram size="24" />
-              </SocialLink>
-            </Socials>
-          </Item>
-        </List>
+              </a>
+            </div>
+          </li>
+        </ul>
 
         <ContactForm />
-      </ContactsContainer>
-    </Section>
+      </div>
+    </section>
   );
 };

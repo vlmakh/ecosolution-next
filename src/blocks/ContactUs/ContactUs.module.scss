@@ -1,31 +1,40 @@
-import styled from "@emotion/styled";
+@import "@/styles/_variables";
+@import "@/styles/_placeholders";
 
-export const ContactsContainer = styled.div`
+.contacts {
+  @extend %section;
+}
+
+.contacts__title {
+  @extend %section__title;
+}
+
+.contacts__cont {
   @media (min-width: 768px) {
     display: flex;
   }
-`;
+}
 
-export const List = styled.ul`
+.contacts__list {
   text-align: left;
 
   @media (min-width: 768px) {
     width: 50%;
   }
-`;
 
-export const Item = styled.li`
-  display: flex;
-  flex-direction: column;
+  & li {
+    display: flex;
+    flex-direction: column;
 
-  &:not(:first-of-type) {
-    margin-top: 24px;
+    &:not(:first-of-type) {
+      margin-top: 24px;
+    }
   }
-`;
+}
 
-export const ItemInfo = styled.a`
+.info {
   text-decoration: none;
-  color: ${(p) => p.theme.colors.main};
+  color: $color-main;
   margin-top: 8px;
   font-size: 20px;
 
@@ -34,31 +43,31 @@ export const ItemInfo = styled.a`
   }
 
   :hover svg {
-    fill: ${(p) => p.theme.colors.accent};
+    fill: $color-accent;
   }
 
   @media (min-width: 768px) {
     margin-top: 16px;
   }
-`
+}
 
-export const Socials = styled.div`
+.socials {
   display: inline-flex;
   gap: 8px;
   margin-top: 8px;
-`;
+}
 
-export const SocialLink = styled.a`
+.socials__link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 48px;
   height: 48px;
-  color: ${(p) => p.theme.colors.main};
+  color: $color-main;
 
   transition: color 250ms ease-in;
 
   &:hover {
-    color: ${(p) => p.theme.colors.accent};
+    color: $color-accent;
   }
-`;
+}

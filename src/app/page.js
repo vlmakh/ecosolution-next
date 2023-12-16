@@ -5,6 +5,7 @@ import { Electricity } from "@/blocks/Electricity/Electricity";
 import { Services } from "@/blocks/Services/Services";
 import { Cases } from "@/blocks/Cases/Cases";
 import { Faq } from "@/blocks/Faq/Faq";
+import { ContactUs } from "@/blocks/ContactUs/ContactUs";
 
 export default function Home() {
   return (
@@ -22,6 +23,8 @@ export default function Home() {
       <Cases />
 
       <Faq />
+
+      <ContactUs />
     </>
   );
 }

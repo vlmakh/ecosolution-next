@@ -85,3 +85,14 @@
   font-size: 18px;
 }
 // font-family: ${(p) => p.theme.fonts.body};
+
+.arrow {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  background-color: $color-accent;
+  border-radius: 50%;
+  border: none;
+  color: #292d32;
+}
