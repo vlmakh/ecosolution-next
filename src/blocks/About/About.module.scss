@@ -1,0 +1,43 @@
+@import "@/styles/_variables";
+@import "@/styles/_placeholders";
+
+.about {
+  @extend %section;
+}
+
+.about__title {
+  @extend %section__title;
+
+  @media (min-width: 768px) {
+    width: 50%;
+    padding-left: 11px;
+  }
+
+  @media (min-width: 1280px) {
+    padding-left: 161px;
+  }
+}
+
+.about__cont {
+  @media (min-width: 768px) {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+}
+
+.about__text {
+  @media (min-width: 768px) {
+    width: 50%;
+    padding-right: 65px;
+    border-right: 1px solid $color-accent;
+  }
+
+  @media (min-width: 1280px) {
+    padding-right: 134px;
+  }
+}
+
+.accent {
+  text-transform: uppercase;
+  color: $color-accent;
+}
