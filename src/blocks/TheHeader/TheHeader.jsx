@@ -26,7 +26,14 @@ export const TheHeader = () => {
   }, []);
 
   return (
-    <header className={css.header}>
+    <header
+      className={css.header}
+      style={{
+        backgroundColor:
+          offset == 0 ? "rgb(243, 245, 250)" : "rgba(200, 200, 200, 0.5)",
+        transition: "all 300ms ease-in",
+      }}
+    >
       <div className={css.header__cont}>
         <a className={css.logoLink} href="#">
           <Image

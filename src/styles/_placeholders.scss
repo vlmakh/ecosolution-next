@@ -54,7 +54,7 @@
   border: none;
   border-radius: 500px;
 
-  transition: all 250ms ease-in;
+  transition: all $duration $timing-function;
 
   &:hover {
     color: $color-accent;
