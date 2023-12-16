@@ -1,9 +1,19 @@
-import { Inter } from "next/font/google";
+import { Oswald, Fira_Sans } from "next/font/google";
 import "@/styles/globals.scss";
 import { TheHeader } from "@/blocks/TheHeader/TheHeader";
 import { TheFooter } from "@/blocks/TheFooter/TheFooter";
 
-const inter = Inter({ subsets: ["latin"] });
+const oswald = Oswald({
+  subsets: ["latin"],
+  weight: ["400", "700"],
+  display: "swap",
+});
+
+const firaSans = Fira_Sans({
+  subsets: ["latin"],
+  weight: ["300", "400"],
+  display: "swap",
+});
 
 export const metadata = {
   title: "Ecosolution",
@@ -13,7 +23,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`${firaSans.className} ${oswald.className}`}>
         <TheHeader />
 
         <main>{children}</main>
