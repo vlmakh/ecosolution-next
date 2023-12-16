@@ -1,77 +1,36 @@
-import {
-  Menu,
-  Close,
-  List,
-  Item,
-  MenuLink,
-  Socials,
-  SocialLink,
-} from "./BurgerMenu.styled";
+import css from "./BurgerMenu.module.scss";
 import { MdArrowOutward } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import { FaFacebook, FaInstagram } from "react-icons/fa";
 import PropTypes from "prop-types";
+import { menu } from "@/data/menu";
 
 export const BurgerMenu = ({ toggleMenu }) => {
   return (
-    <Menu>
-      <Close type="button" onClick={toggleMenu}>
-        <RxCross2 size="20"/> close
-      </Close>
+    <div className={css.menu}>
+      <button className={css.close} type="button" onClick={toggleMenu}>
+        <RxCross2 size="20" /> close
+      </button>
 
-      <List>
-        <Item>
-          <MenuLink href="#" onClick={toggleMenu}>
-            Main <MdArrowOutward />
-          </MenuLink>
-        </Item>
+      <ul className={css.menu__list}>
+        {menu.map((item) => (
+          <li className={css.menu__item} key={item.id}>
+            <a className={css.menu__link} href={item.id} onClick={toggleMenu}>
+              {item.name} <MdArrowOutward />
+            </a>
+          </li>
+        ))}
+      </ul>
 
-        <Item>
-          <MenuLink href="#about" onClick={toggleMenu}>
-            About <MdArrowOutward />
-          </MenuLink>
-        </Item>
-
-        <Item>
-          <MenuLink href="#values" onClick={toggleMenu}>
-            Values <MdArrowOutward />
-          </MenuLink>
-        </Item>
-
-        <Item>
-          <MenuLink href="#services" onClick={toggleMenu}>
-            Services <MdArrowOutward />
-          </MenuLink>
-        </Item>
-       
-        <Item>
-          <MenuLink href="#cases" onClick={toggleMenu}>
-            Cases <MdArrowOutward />
-          </MenuLink>
-        </Item>
-
-        <Item>
-          <MenuLink href="#faq" onClick={toggleMenu}>
-            FAQ <MdArrowOutward />
-          </MenuLink>
-        </Item>
-        
-        <Item>
-          <MenuLink href="#contactus" onClick={toggleMenu}>
-            Contact Us <MdArrowOutward />
-          </MenuLink>
-        </Item>
-      </List>
-
-      <Socials>
-        <SocialLink href="http://facebook.com">
+      <div className={css.socials}>
+        <a className={css.socials__link} href="http://facebook.com">
           <FaFacebook size="24" />
-        </SocialLink>
-        <SocialLink href="http://instagram.com">
+        </a>
+        <a className={css.socials__link} href="http://instagram.com">
           <FaInstagram size="24" />
-        </SocialLink>
-      </Socials>
-    </Menu>
+        </a>
+      </div>
+    </div>
   );
 };
 

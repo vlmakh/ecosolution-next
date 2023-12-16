@@ -1,10 +1,10 @@
-import styled from "@emotion/styled";
+@import "@/styles/_variables";
 
-export const Menu = styled.div`
+.menu {
   width: calc(100vw - 40px);
   height: calc(100vh - 72px);
   padding: 24px;
-  background-color: ${(p) => p.theme.colors.main};
+  background-color: $color-main;
   border-radius: 16px;
   opacity: 90%;
   max-height: 865px;
@@ -14,9 +14,9 @@ export const Menu = styled.div`
   @media (min-width: 480px) {
     width: 365px;
   }
-`;
+}
 
-export const Close = styled.button`
+.close {
   display: flex;
   align-items: center;
   width: 100%;
@@ -32,47 +32,49 @@ export const Close = styled.button`
   transition: color 250ms ease-in;
 
   &:hover {
-    color: ${(p) => p.theme.colors.accent};
+    color: $color-accent;
   }
-`;
+}
 
-export const List = styled.ul`
+.menu__list {
   list-style: none;
   margin-top: 16px;
   flex-grow: 1;
-`;
+}
 
-export const Item = styled.li`
+.menu__item {
   &:not(:first-of-type) {
     margin-top: 8px;
   }
-`;
+}
 
-export const MenuLink = styled.a`
+.menu__link {
   text-decoration: none;
   color: #ffffff;
   font-size: 24px;
 
   transition: color 250ms ease-in;
 
-  &:hover {
-    color: ${(p) => p.theme.colors.accent};
+  &:hover,
+  &:focus {
+    color: $color-accent;
   }
-`;
+}
 
-export const Socials = styled.div`
+.socials {
   display: flex;
   gap: 8px;
-`;
+}
 
-export const SocialLink = styled.a`
+.socials__link {
   width: 24px;
   height: 24px;
   color: #ffffff;
 
   transition: color 250ms ease-in;
 
-  &:hover {
-    color: ${(p) => p.theme.colors.accent};
+  &:hover,
+  &:focus {
+    color: $color-accent;
   }
-`;
+}

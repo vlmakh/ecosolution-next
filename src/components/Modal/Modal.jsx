@@ -1,10 +1,8 @@
 "use client";
 
 import { useEffect } from "react";
-import { createPortal } from "react-dom";
-import css from "./ContactForm.module.scss";
-
-const modalRoot = document.querySelector("#modal-root");
+import css from "./Modal.module.scss";
+import PropTypes from "prop-types";
 
 export default function Modal({ onClose, children }) {
   useEffect(() => {
@@ -27,10 +25,14 @@ export default function Modal({ onClose, children }) {
     }
   };
 
-  return createPortal(
+  return (
     <div className={css.overlay} onClick={handleBackdrop}>
       <div className={css.modelWrap}>{children}</div>
-    </div>,
-    modalRoot
+    </div>
   );
 }
+
+Modal.propTypes = {
+  onClose: PropTypes.func,
+  children: PropTypes.any,
+};

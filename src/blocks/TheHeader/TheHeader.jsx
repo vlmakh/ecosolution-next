@@ -5,6 +5,8 @@ import { FiMenu } from "react-icons/fi";
 import { IoMdArrowRoundDown } from "react-icons/io";
 import { useState, useEffect } from "react";
 import Image from "next/image";
+import Modal from "@/components/Modal/Modal";
+import { BurgerMenu } from "@/components/BurgerMenu/BurgerMenu";
 
 export const TheHeader = () => {
   const [showMenu, setShowMenu] = useState(false);
@@ -52,6 +54,12 @@ export const TheHeader = () => {
           </a>
         </nav>
       </div>
+
+      {showMenu && (
+        <Modal onClose={toggleMenu}>
+          <BurgerMenu toggleMenu={toggleMenu} />
+        </Modal>
+      )}
     </header>
   );
 };
