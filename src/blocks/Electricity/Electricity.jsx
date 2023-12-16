@@ -3,9 +3,13 @@
 import css from "./Electricity.module.scss";
 import { useState, useEffect } from "react";
 
-const savedData = JSON.parse(localStorage.getItem("ecosolution"));
+let savedData = null;
 
 export const Electricity = () => {
+  useEffect(() => {
+    savedData = JSON.parse(localStorage.getItem("ecosolution"));
+  }, []);
+
   const [state, setState] = useState(savedData ?? 1134147814);
 
   const unit = 1;
