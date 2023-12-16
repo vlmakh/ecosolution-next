@@ -27,7 +27,7 @@ export default function Modal({ onClose, children }) {
 
   return (
     <div className={css.overlay} onClick={handleBackdrop}>
-      <div className={css.modelWrap}>{children}</div>
+      <div className={css.modalWrap}>{children}</div>
     </div>
   );
 }
