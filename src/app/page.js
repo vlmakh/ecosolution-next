@@ -4,6 +4,7 @@ import { Values } from "@/blocks/Values/Values";
 import { Electricity } from "@/blocks/Electricity/Electricity";
 import { Services } from "@/blocks/Services/Services";
 import { Cases } from "@/blocks/Cases/Cases";
+import { Faq } from "@/blocks/Faq/Faq";
 
 export default function Home() {
   return (
@@ -19,6 +20,8 @@ export default function Home() {
       <Services />
 
       <Cases />
+
+      <Faq />
     </>
   );
 }
