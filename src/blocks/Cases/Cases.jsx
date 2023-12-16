@@ -1,20 +1,8 @@
-import { Section } from "../Base/Base";
+"use client";
+
 import { GoArrowLeft, GoArrowRight, GoArrowUpRight } from "react-icons/go";
-import {
-  TitleCases,
-  CasesTop,
-  ButtonArrow,
-  SliderWrap,
-  CardWrap,
-  CaseCard,
-  CtrlBox,
-  Grey,
-  NameBox,
-  Name,
-  ButtonCase,
-  CardFooter,
-} from "./Cases.styled";
-import { cases } from "../../assets/cases";
+import css from "./Cases.module.scss";
+import { cases } from "@/data/cases";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -42,52 +30,56 @@ export const Cases = () => {
   const slider = useRef(null);
 
   return (
-    <Section id="cases">
-      <CasesTop>
-        <TitleCases>
+    <section className={css.cases} id="cases">
+      <div className={css.cases__top}>
+        <h2 className={css.cases__title}>
           Successful cases <br /> of our company
-        </TitleCases>
+        </h2>
 
-        <CtrlBox>
+        <div className={css.slider__ctrls}>
           <p>
             {slideNumber.toString().padStart(2, "0")}{" "}
-            <Grey>/{cases.length.toString().padStart(2, "0")}</Grey>
+            <span className={css.grey}>
+              /{cases.length.toString().padStart(2, "0")}
+            </span>
           </p>
           <div>
-            <ButtonArrow
+            <button
+              className={css.arrow}
               type="button"
               onClick={() => slider?.current?.slickPrev()}
             >
               <GoArrowLeft size="36" />
-            </ButtonArrow>{" "}
-            <ButtonArrow
+            </button>{" "}
+            <button
+              className={css.arrow}
               type="button"
               onClick={() => slider?.current?.slickNext()}
             >
               <GoArrowRight size="36" />
-            </ButtonArrow>
+            </button>
           </div>
-        </CtrlBox>
-      </CasesTop>
+        </div>
+      </div>
 
-      <SliderWrap>
+      <div className={css.slider__wrap}>
         <Slider ref={slider} {...settings}>
           {cases.map((image, idx) => (
-            <CardWrap key={idx}>
-              <CaseCard>
+            <div className={css.card__wrap} key={idx}>
+              <div className={css.card}>
                 <picture>
                   <source
-                    srcSet={image.srcMob}
+                    srcSet={`/images/cases/mob_${image.srcName}.jpg`}
                     media="(max-width: 767px)"
                     sizes="320px"
                   />
                   <source
-                    srcSet={image.srcTab}
+                    srcSet={`/images/cases/tab_${image.srcName}.jpg`}
                     media="(min-width: 768px) and (max-width: 1199px)"
                     sizes="342px"
                   />
                   <source
-                    srcSet={image.srcDsk}
+                    srcSet={`/images/cases/dsk_${image.srcName}.jpg`}
                     media="(min-width: 1280px)"
                     sizes="596px"
                   />
@@ -99,22 +91,22 @@ export const Cases = () => {
                   />
                 </picture>
 
-                <NameBox>
-                  <Name>{image.name}</Name>
-                  <ButtonCase href="#">
+                <div className={css.name__wrap}>
+                  <p className={css.card__name}>{image.name}</p>
+                  <a className={css.card__link} href="#">
                     <GoArrowUpRight size="28" />
-                  </ButtonCase>
-                </NameBox>
+                  </a>
+                </div>
 
-                <CardFooter>
+                <div className={css.card__footer}>
                   <p>{image.tech}</p>
                   <p>{image.date}</p>
-                </CardFooter>
-              </CaseCard>
-            </CardWrap>
+                </div>
+              </div>
+            </div>
           ))}
         </Slider>
-      </SliderWrap>
-    </Section>
+      </div>
+    </section>
   );
 };
