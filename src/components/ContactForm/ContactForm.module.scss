@@ -67,7 +67,7 @@
   border-radius: 500px;
   cursor: pointer;
 
-  transition: all 250ms ease-in;
+  transition: all $duration $timing-function;
 
   &:hover {
     border-color: $color-main;

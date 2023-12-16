@@ -54,7 +54,7 @@
   border: 1px solid $color-accent;
   border-radius: 500px;
 
-  transition: all 250ms ease-in;
+  transition: all $duration $timing-function;
 
   &:hover, &:focus {
     border: 1px solid $color-main;

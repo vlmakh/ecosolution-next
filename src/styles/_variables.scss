@@ -1,10 +1,10 @@
- @import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300;400&family=Oswald:wght@400;700&display=swap");
+ @import './fonts';
 
 $color-main: #173D33; // text
 $color-main025: #173D333f; // main 0.25
 $color-secondary: #828382; // grey
 $color-accent: #97D28B; // lightgreen
 $color-inactive: #EAEDF1; // lightgrey
-$font-title: 'Oswald';
+$font-title: 'Oswald', sans-serif;
 $duration: 300ms;
-$timing-function: ease in;
+$timing-function: ease-in;

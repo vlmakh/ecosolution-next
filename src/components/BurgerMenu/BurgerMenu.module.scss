@@ -29,7 +29,7 @@
   text-align: left;
   cursor: pointer;
 
-  transition: color 250ms ease-in;
+  transition: color $duration $timing-function;
 
   &:hover {
     color: $color-accent;
