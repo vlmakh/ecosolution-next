@@ -1,5 +1,6 @@
-import { Section } from "../Base/Base";
-import { TitleElectr, QtyWrap, QtyBox, Qty, KWH } from "./Electricity.styled";
+"use client";
+
+import css from "./Electricity.module.scss";
 import { useState, useEffect } from "react";
 
 const value = localStorage.getItem("ecosolution");
@@ -14,9 +15,15 @@ export const Electricity = () => {
   const billion = million * 1000;
 
   const billions = Math.floor(state / billion);
-  const millions = Math.floor((state % billion) / million).toString().padStart(3, '0');
-  const thousands = Math.floor(((state % billion) % million) / thousand).toString().padStart(3, '0');
-  const units = Math.floor((((state % billion) % million) % thousand) / unit).toString().padStart(3, '0');
+  const millions = Math.floor((state % billion) / million)
+    .toString()
+    .padStart(3, "0");
+  const thousands = Math.floor(((state % billion) % million) / thousand)
+    .toString()
+    .padStart(3, "0");
+  const units = Math.floor((((state % billion) % million) % thousand) / unit)
+    .toString()
+    .padStart(3, "0");
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -29,19 +36,19 @@ export const Electricity = () => {
   }, [state]);
 
   return (
-    <Section>
-      <TitleElectr>
+    <section className={css.electricity}>
+      <h2 className={css.electricity__title}>
         Electricity we produced <br /> for all time
-      </TitleElectr>
+      </h2>
 
-      <QtyWrap>
-        <QtyBox>
-          <Qty>
+      <div className={css.qty}>
+        <div className={css.qty__wrap}>
+          <span className={css.qty__number}>
             {billions}.{millions}.{thousands}.{units}
-          </Qty>{" "}
-          <KWH>kWh</KWH>
-        </QtyBox>
-      </QtyWrap>
-    </Section>
+          </span>{" "}
+          <span className={css.qty__kwh}>kWh</span>
+        </div>
+      </div>
+    </section>
   );
 };

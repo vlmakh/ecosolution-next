@@ -1,14 +1,21 @@
-import styled from "@emotion/styled";
-import { Title } from "../Base/Base";
+@import "@/styles/_variables";
+@import "@/styles/_placeholders";
 
-export const TitleElectr = styled(Title)`
+.electricity {
+  @extend %section;
+}
+
+.electricity__title {
+  @extend %section__title;
+
   text-align: center;
-  @media (min-width: 768px) {    
+
+  @media (min-width: 768px) {
     margin-bottom: 24px;
   }
-`;
+}
 
-export const QtyWrap = styled.div`
+.qty {
   text-align: center;
 
   &::before {
@@ -17,28 +24,28 @@ export const QtyWrap = styled.div`
     height: 48px;
     width: 1px;
     margin: 0 auto;
-    background-color: ${(p) => p.theme.colors.accent};
+    background-color: $color-accent;
 
     @media (min-width: 768px) {
       height: 87px;
     }
   }
-`;
+}
 
-export const QtyBox = styled.div`
+.qty__wrap {
   display: flex;
   gap: 16px;
   justify-content: center;
   align-items: center;
-`;
+  font-family: $font-title;
+}
 
-export const Qty = styled.span`
+.qty__number {
   text-align: left;
   width: 260px;
   font-size: 48px;
   font-weight: 700;
-  font-family: ${(p) => p.theme.fonts.title};
-  color: ${(p) => p.theme.colors.accent};
+  color: $color-accent;
 
   @media (min-width: 768px) {
     width: 564px;
@@ -49,10 +56,10 @@ export const Qty = styled.span`
     width: 940px;
     font-size: 164px;
   }
-`;
+}
 
-export const KWH = styled.span`
-  color: ${(p) => p.theme.colors.main};
+.qty__kwh {
+  color: $color-main;
   font-size: 24px;
   font-weight: 400;
 
@@ -63,4 +70,4 @@ export const KWH = styled.span`
   @media (min-width: 1280px) {
     font-size: 48px;
   }
-`;
+}
