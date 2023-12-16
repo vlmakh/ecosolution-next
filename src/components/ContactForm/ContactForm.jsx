@@ -31,10 +31,12 @@ export const ContactForm = () => {
           <p>* Full Name:</p>
           <label className={css.label} htmlFor="name">
             <Field
+              id="name"
               className={css.input}
               name="name"
               type="name"
               placeholder="John Rosie"
+              autoComplete="on"
             ></Field>
             <ErrorMessage className={css.error} component="div" name="name" />
           </label>
@@ -42,10 +44,12 @@ export const ContactForm = () => {
           <p>* E-mail:</p>
           <label className={css.label} htmlFor="email">
             <Field
+              id="email"
               className={css.input}
               name="email"
               type="email"
               placeholder="johnrosie@gmail.com"
+              autoComplete="on"
             ></Field>
             <ErrorMessage className={css.error} component="div" name="email" />
           </label>
@@ -55,11 +59,13 @@ export const ContactForm = () => {
             <Field className={css.input} name="phone">
               {({ field }) => (
                 <InputMask
+                  id="phone"
                   className={css.mask}
                   {...field}
                   type="tel"
                   mask="+99 999 999 9999"
                   placeholder="+380961234567"
+                  autoComplete="on"
                 />
               )}
             </Field>
@@ -69,6 +75,7 @@ export const ContactForm = () => {
           <p>Message:</p>
           <label className={css.label} htmlFor="message">
             <Field
+              id="message"
               className={css.input}
               as="textarea"
               name="message"
