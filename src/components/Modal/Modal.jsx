@@ -1,20 +1,22 @@
-import { useEffect } from 'react';
-import { createPortal } from 'react-dom';
-import { Overlay, ModalWrap } from './Modal.styled';
+"use client";
 
-const modalRoot = document.querySelector('#modal-root');
+import { useEffect } from "react";
+import { createPortal } from "react-dom";
+import css from "./ContactForm.module.scss";
+
+const modalRoot = document.querySelector("#modal-root");
 
 export default function Modal({ onClose, children }) {
   useEffect(() => {
-    window.addEventListener('keydown', handleEscape);
+    window.addEventListener("keydown", handleEscape);
 
     return () => {
-      window.removeEventListener('keydown', handleEscape);
+      window.removeEventListener("keydown", handleEscape);
     };
   });
 
   const handleEscape = (event) => {
-    if (event.code === 'Escape') {
+    if (event.code === "Escape") {
       onClose();
     }
   };
@@ -26,9 +28,9 @@ export default function Modal({ onClose, children }) {
   };
 
   return createPortal(
-    <Overlay onClick={handleBackdrop}>
-      <ModalWrap>{children}</ModalWrap>
-    </Overlay>,
+    <div className={css.overlay} onClick={handleBackdrop}>
+      <div className={css.modelWrap}>{children}</div>
+    </div>,
     modalRoot
   );
 }

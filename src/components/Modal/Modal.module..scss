@@ -1,6 +1,4 @@
-import styled from '@emotion/styled';
-
-export const Overlay = styled.div`
+.overlay {
   position: fixed;
   padding-top: 8px;
   top: 0;
@@ -10,9 +8,9 @@ export const Overlay = styled.div`
   background-color: rgba(23, 61, 51, 0.25);
   backdrop-filter: blur(4px);
   z-index: 10;
-`;
+}
 
-export const ModalWrap = styled.div`
+.modalWrap {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -28,4 +26,4 @@ export const ModalWrap = styled.div`
   @media (min-width: 1280px) {
     right: 100px;
   }
-`;
+}
