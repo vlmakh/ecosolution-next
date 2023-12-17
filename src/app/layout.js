@@ -1,5 +1,5 @@
 import { Fira_Sans } from "next/font/google";
-import "@/styles/globals.scss";
+import "./globals.scss";
 import { TheHeader } from "@/blocks/TheHeader/TheHeader";
 import { TheFooter } from "@/blocks/TheFooter/TheFooter";
 

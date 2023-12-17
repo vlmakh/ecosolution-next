@@ -1,5 +1,4 @@
 @import "@/styles/_variables";
-@import "@/styles/_fonts";
 
 %section {
   max-width: 480px;
@@ -24,7 +23,7 @@
   font-size: 28px;
   line-height: 28px;
   font-weight: 400;
-  font-family: "Oswald", "Arial Narrow Bold", sans-serif;
+  font-family: $font-title;
   text-transform: uppercase;
   margin-bottom: 24px;
 
