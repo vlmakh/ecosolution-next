@@ -2,15 +2,12 @@ import { FaArrowRight } from "react-icons/fa6";
 import { contacts } from "@/data/contacts";
 import Image from "next/image";
 import css from "./Main.module.scss";
-import { oswald } from "@/app/fonts";
 
 export const Main = () => {
   return (
     <section className={css.main}>
       <div className={css.main__top}>
-        <h1 className={`${oswald.className} ${css.main__title}`}>
-          RENEWABLE ENERGY For any task
-        </h1>
+        <h1 className={css.main__title}>RENEWABLE ENERGY For any task</h1>
 
         <div>
           <p>
