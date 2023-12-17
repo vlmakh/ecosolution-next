@@ -42,7 +42,7 @@
     transition: fill $duration $timing-function;
   }
 
-  :hover svg {
+  &:hover svg {
     fill: $color-accent;
   }
 
