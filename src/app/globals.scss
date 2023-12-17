@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -8,7 +10,6 @@ html {
 
 body {
   font-size: 16px;
-  // font-family: 'Fira Sans', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: #173d33;
   margin: 0;
   background-color: #f3f5fa;
@@ -16,7 +17,13 @@ body {
 
 h1,
 h2,
-h3,
+h3
+ {
+  font-family: 'Oswald', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
 h4,
 h5,
 h6,

@@ -1,5 +1,6 @@
 @import "@/styles/_variables";
 @import "@/styles/_placeholders";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
 .electricity {
   @extend %section;
@@ -37,7 +38,7 @@
   gap: 16px;
   justify-content: center;
   align-items: center;
-  // font-family: $font-title;
+  font-family: 'Oswald', sans-serif;
 }
 
 .qty__number {

@@ -1,5 +1,6 @@
 @import "@/styles/_variables";
 @import "@/styles/_placeholders";
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
 .services {
   @extend %section;
@@ -22,7 +23,7 @@
 .services__text {
   padding: 52px 18px;
   font-size: 36px;
-  // font-family: $font-title;
+  font-family: "Oswald", sans-serif;
   text-transform: uppercase;
   text-align: left;
   line-height: 36px;
