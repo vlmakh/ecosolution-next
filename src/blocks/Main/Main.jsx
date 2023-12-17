@@ -39,19 +39,10 @@ export const Main = () => {
           alt="ecosolution"
           width="1240"
           height="524"
+          srcset="/images/main/main_mob.jpg 320w, /images/main/main_tab.jpg 708w, /images/main/main_desk.jpg 1240w"
+          // sizes="(min-width: 1280px) 1240px, (min-width: 768px) 708px, 320px"
         />
       </div>
-
-      {/* <picture className={css.thumb}>
-        <source srcSet="/images/main/main_mob.jpg" media="(max-width: 767px)" sizes="320px" />
-        <source
-          srcSet="/images/main/main_tab.jpg"
-          media="(min-width: 768px) and (max-width: 1199px)"
-          sizes="708px"
-        />
-        <source srcSet="/images/main/main_desk.jpg" media="(min-width: 1280px)" sizes="1240px" />
-        <Image src="/images/main/main_mob.jpg" alt="ecosolution" />
-      </picture> */}
     </section>
   );
 };
