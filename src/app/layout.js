@@ -1,13 +1,7 @@
-import { Fira_Sans } from "next/font/google";
+import { firaSans } from "./fonts";
 import "./globals.scss";
 import { TheHeader } from "@/blocks/TheHeader/TheHeader";
 import { TheFooter } from "@/blocks/TheFooter/TheFooter";
-
-const firaSans = Fira_Sans({
-  subsets: ["latin"],
-  weight: ["300", "400"],
-  display: "swap",
-});
 
 export const metadata = {
   title: "Ecosolution",

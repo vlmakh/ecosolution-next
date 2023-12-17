@@ -2,12 +2,15 @@ import { FaArrowRight } from "react-icons/fa6";
 import { contacts } from "@/data/contacts";
 import Image from "next/image";
 import css from "./Main.module.scss";
+import { oswald } from "@/app/fonts";
 
 export const Main = () => {
   return (
     <section className={css.main}>
       <div className={css.main__top}>
-        <h1 className={css.main__title}>RENEWABLE ENERGY For any task</h1>
+        <h1 className={`${oswald.className} ${css.main__title}`}>
+          RENEWABLE ENERGY For any task
+        </h1>
 
         <div>
           <p>
@@ -39,8 +42,9 @@ export const Main = () => {
           alt="ecosolution"
           width="1240"
           height="524"
-          srcset="/images/main/main_mob.jpg 320w, /images/main/main_tab.jpg 708w, /images/main/main_desk.jpg 1240w"
+          srcSet="/images/main/main_mob.jpg 320w, /images/main/main_tab.jpg 708w, /images/main/main_desk.jpg 1240w"
           // sizes="(min-width: 1280px) 1240px, (min-width: 768px) 708px, 320px"
+          priority={false}
         />
       </div>
     </section>
