@@ -15,15 +15,23 @@ export const TheFooter = () => {
             height="40"
           />
 
-          <a className={css.arrowUp} href="#">
+          <a className={css.arrowUp} href="#" aria-label="To the top of site">
             <FaArrowUp size="16" />
           </a>
 
           <div className={css.socials}>
-            <a className={css.socials__link} href="http://facebook.com">
+            <a
+              className={css.socials__link}
+              href="http://facebook.com"
+              aria-label="Facebook"
+            >
               <FaFacebook size="24" />
             </a>
-            <a className={css.socials__link} href="http://instagram.com">
+            <a
+              className={css.socials__link}
+              href="http://instagram.com"
+              aria-label="Instagram"
+            >
               <FaInstagram size="24" />
             </a>
           </div>

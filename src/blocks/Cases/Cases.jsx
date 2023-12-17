@@ -48,6 +48,7 @@ export const Cases = () => {
               className={css.arrow}
               type="button"
               onClick={() => slider?.current?.slickPrev()}
+              aria-label="Previous Case"
             >
               <GoArrowLeft size="36" />
             </button>{" "}
@@ -55,6 +56,7 @@ export const Cases = () => {
               className={css.arrow}
               type="button"
               onClick={() => slider?.current?.slickNext()}
+              aria-label="Next Case"
             >
               <GoArrowRight size="36" />
             </button>
@@ -93,7 +95,11 @@ export const Cases = () => {
 
                 <div className={css.name__wrap}>
                   <p className={css.card__name}>{image.name}</p>
-                  <a className={css.card__link} href="#">
+                  <a
+                    className={css.card__link}
+                    href="#"
+                    aria-label="More information"
+                  >
                     <GoArrowUpRight size="28" />
                   </a>
                 </div>
