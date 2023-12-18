@@ -55,7 +55,7 @@ export const Values = () => {
               src="/images/values/values_1_342.jpg"
               alt="values"
               loading="lazy"
-              width={342}
+              width="100%"
               height={197}
             />
           </picture>
@@ -76,7 +76,7 @@ export const Values = () => {
               src="/images/values/values_2_342.jpg"
               alt="values"
               loading="lazy"
-              width={342}
+              width="100%"
               height={197}
             />
           </picture>
