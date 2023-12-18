@@ -23,10 +23,18 @@ export const BurgerMenu = ({ toggleMenu }) => {
       </ul>
 
       <div className={css.socials}>
-        <a className={css.socials__link} href="http://facebook.com">
+        <a
+          className={css.socials__link}
+          href="http://facebook.com"
+          aria-label="Facebook"
+        >
           <FaFacebook size="24" />
         </a>
-        <a className={css.socials__link} href="http://instagram.com">
+        <a
+          className={css.socials__link}
+          href="http://instagram.com"
+          aria-label="Instagram"
+        >
           <FaInstagram size="24" />
         </a>
       </div>
