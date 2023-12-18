@@ -89,7 +89,8 @@ export const Cases = () => {
                     src={image.srcMob}
                     alt={image.alt}
                     loading="lazy"
-                    width="100%"
+                    width={320}
+                    height={168}
                   />
                 </picture>
 
