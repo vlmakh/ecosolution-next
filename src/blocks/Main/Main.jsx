@@ -41,7 +41,7 @@ export const Main = () => {
           width="1240"
           height="524"
           // sizes="(min-width: 1280px) 1240px, (min-width: 768px) 708px, 320px"
-          priority={false}
+          priority={true}
         />
       </div>
     </section>
