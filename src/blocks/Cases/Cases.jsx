@@ -1,6 +1,6 @@
 "use client";
 
-import { GoArrowLeft, GoArrowRight, GoArrowUpRight } from "react-icons/go";
+import { GoArrowLeft, GoArrowRight } from "react-icons/go";
 import css from "./Cases.module.scss";
 import { cases } from "@/data/cases";
 import Slider from "react-slick";
@@ -9,7 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useRef } from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useState } from "react";
-import Image from "next/image";
+import { CaseCard } from "@/components/CaseCard/CaseCard";
 
 export const Cases = () => {
   const isMobileScreen = useMediaQuery("(max-width: 767px)");
@@ -67,58 +67,8 @@ export const Cases = () => {
 
       <div className={css.slider__wrap}>
         <Slider ref={slider} {...settings}>
-          {cases.map((image, idx) => (
-            <div className={css.card__wrap} key={idx}>
-              <div className={css.card}>
-                <Image
-                  src={`/images/cases/${image.srcName}.webp`}
-                  alt="Values"
-                  width={1192}
-                  height={592}
-                  sizes="(min-width: 1280px) 596px, (min-width: 768px) 342px, 320px"
-                ></Image>
-                {/* <picture>
-                  <source
-                    srcSet={`/images/cases/mob_${image.srcName}.jpg`}
-                    media="(max-width: 767px)"
-                    sizes="320px"
-                  />
-                  <source
-                    srcSet={`/images/cases/tab_${image.srcName}.jpg`}
-                    media="(min-width: 768px) and (max-width: 1199px)"
-                    sizes="342px"
-                  />
-                  <source
-                    srcSet={`/images/cases/dsk_${image.srcName}.jpg`}
-                    media="(min-width: 1280px)"
-                    sizes="596px"
-                  />
-                  <img
-                    src={image.srcMob}
-                    alt={image.alt}
-                    loading="lazy"
-                    width="100%"
-                    height={168}
-                  />
-                </picture> */}
-
-                <div className={css.name__wrap}>
-                  <p className={css.card__name}>{image.name}</p>
-                  <a
-                    className={css.card__link}
-                    href="#"
-                    aria-label="More information"
-                  >
-                    <GoArrowUpRight size="28" />
-                  </a>
-                </div>
-
-                <div className={css.card__footer}>
-                  <p>{image.tech}</p>
-                  <p>{image.date}</p>
-                </div>
-              </div>
-            </div>
+          {cases.map((item, idx) => (
+            <CaseCard item={item} key={idx} />
           ))}
         </Slider>
       </div>

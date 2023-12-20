@@ -7,7 +7,6 @@ export const cases = [
     name: "1 Lviv Region, Radekhiv town Private Enterprise “ZAKHIDNYI BUH”",
     tech: "Wind Power for auto field irrigation",
     date: "July 2023",
-    width: 320,
   },
   {
     srcName: "case2",

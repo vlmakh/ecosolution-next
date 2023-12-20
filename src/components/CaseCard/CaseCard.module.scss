@@ -1,0 +1,66 @@
+@import "@/styles/_variables";
+
+.card__wrap {
+  @media (min-width: 768px) {
+    padding-left: 12px;
+    padding-right: 12px;
+    height: 100%;
+  }
+}
+
+.card {
+  background-color: $color-inactive;
+}
+
+.name__wrap {
+  display: flex;
+  justify-content: space-between;
+  padding: 24px 12px;
+}
+
+.card__link {
+  display: grid;
+  place-items: center;
+  width: 60px;
+  height: 60px;
+  background-color: $color-accent;
+  border-radius: 50%;
+  border: none;
+
+  transition: all 250ms ease-in;
+
+  &:hover,
+  &:focus {
+    background-color: $color-main;
+    color: $color-accent;
+  }
+}
+
+.card__name {
+  text-align: left;
+  width: 175px;
+
+  @media (min-width: 768px) {
+    width: 200px;
+  }
+
+  @media (min-width: 1280px) {
+    width: 360px;
+  }
+}
+
+.card__footer {
+  width: calc(100% - 24px);
+  border-top: 1px solid $color-accent;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  margin: 0 auto;
+  font-size: 12px;
+  text-align: left;
+
+  @media (min-width: 1280px) {
+    font-size: 16px;
+  }
+}
