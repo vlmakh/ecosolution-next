@@ -1,6 +1,5 @@
 @import "@/styles/_variables";
 @import "@/styles/_placeholders";
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
 .services {
   @extend %section;
@@ -41,7 +40,8 @@
   font-size: 20px;
   line-height: 36px;
 
-  background-image: url("/images/services/energy_mob.png");
+  background-image: image-set(url("/images/services/energy.webp") 1x,
+      url("/images/services/energy@2x.webp") 2x);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: 50% 50%;
