@@ -27,6 +27,8 @@ export const BurgerMenu = ({ toggleMenu }) => {
           className={css.socials__link}
           href="http://facebook.com"
           aria-label="Facebook"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
         >
           <FaFacebook size="24" />
         </a>
@@ -34,6 +36,8 @@ export const BurgerMenu = ({ toggleMenu }) => {
           className={css.socials__link}
           href="http://instagram.com"
           aria-label="Instagram"
+          target="_blank"
+          rel="noopener noreferrer nofollow"
         >
           <FaInstagram size="24" />
         </a>

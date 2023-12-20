@@ -37,6 +37,7 @@ export const ContactUs = () => {
               className={css.info}
               href="https://maps.app.goo.gl/rvMVfG57WyaTB5Sm7"
               target="_blank"
+              rel="noopener noreferrer nofollow"
             >
               <FaRegMap /> {contacts.add}
             </a>
@@ -48,6 +49,8 @@ export const ContactUs = () => {
                 className={css.socials__link}
                 href="http://facebook.com"
                 aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
               >
                 <FaFacebook size="24" />
               </a>
@@ -55,6 +58,8 @@ export const ContactUs = () => {
                 className={css.socials__link}
                 href="http://instagram.com"
                 aria-label="Instagram"
+                target="_blank"
+                rel="noopener noreferrer nofollow"
               >
                 <FaInstagram size="24" />
               </a>
