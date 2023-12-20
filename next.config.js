@@ -2,8 +2,8 @@
 const path = require("path");
 
 const nextConfig = {
-  sassOptions: {
-    includePaths: [path.join(__dirname, "styles")],
+  images: {
+    deviceSizes: [360, 480, 768, 1280, 1536, 2560],
   },
 };
 

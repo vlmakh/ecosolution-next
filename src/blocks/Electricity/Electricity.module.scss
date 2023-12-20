@@ -1,6 +1,4 @@
-@import "@/styles/_variables";
 @import "@/styles/_placeholders";
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 
 .electricity {
   @extend %section;
@@ -13,62 +11,5 @@
 
   @media (min-width: 768px) {
     margin-bottom: 24px;
-  }
-}
-
-.qty {
-  text-align: center;
-
-  &::before {
-    content: "";
-    display: block;
-    height: 48px;
-    width: 1px;
-    margin: 0 auto;
-    background-color: $color-accent;
-
-    @media (min-width: 768px) {
-      height: 87px;
-    }
-  }
-}
-
-.qty__wrap {
-  display: flex;
-  gap: 16px;
-  justify-content: center;
-  align-items: center;
-  font-family: '__Oswald_ae7a68', sans-serif;
-}
-
-.qty__number {
-  text-align: left;
-  width: 260px;
-  font-size: 48px;
-  font-weight: 700;
-  color: $color-accent;
-
-  @media (min-width: 768px) {
-    width: 564px;
-    font-size: 100px;
-  }
-
-  @media (min-width: 1280px) {
-    width: 940px;
-    font-size: 164px;
-  }
-}
-
-.qty__kwh {
-  color: $color-main;
-  font-size: 24px;
-  font-weight: 400;
-
-  @media (min-width: 768px) {
-    font-size: 28px;
-  }
-
-  @media (min-width: 1280px) {
-    font-size: 48px;
   }
 }
