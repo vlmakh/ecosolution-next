@@ -3,6 +3,7 @@ import { TbWorldCheck } from "react-icons/tb";
 import { BsUniversalAccessCircle } from "react-icons/bs";
 import { FaRankingStar } from "react-icons/fa6";
 import { HiChip } from "react-icons/hi";
+import Image from "next/image";
 
 export const Values = () => {
   return (
@@ -40,46 +41,22 @@ export const Values = () => {
           </div>
         </li>
         <li className={css.values__item}>
-          <picture>
-            <source
-              srcSet="/images/values/values_1_342.jpg"
-              media="(min-width: 768px) and (max-width: 1199px)"
-              sizes="342px"
-            />
-            <source
-              srcSet="/images/values/values_1_596.jpg"
-              media="(min-width: 1280px)"
-              sizes="596px"
-            />
-            <img
-              src="/images/values/values_1_342.jpg"
-              alt="values"
-              loading="lazy"
-              width="100%"
-              height={197}
-            />
-          </picture>
+          <Image
+            src="/images/values/value1.webp"
+            alt="Values"
+            width={1192}
+            height={678}
+            sizes="(min-width: 1280px) 592px, (min-width: 768px) 342px"
+          ></Image>
         </li>
         <li className={css.values__item}>
-          <picture>
-            <source
-              srcSet="/images/values/values_2_342.jpg"
-              media="(min-width: 768px) and (max-width: 1199px)"
-              sizes="342px"
-            />
-            <source
-              srcSet="/images/values/values_2_596.jpg"
-              media="(min-width: 1280px)"
-              sizes="596px"
-            />
-            <img
-              src="/images/values/values_2_342.jpg"
-              alt="values"
-              loading="lazy"
-              width="100%"
-              height={197}
-            />
-          </picture>
+          <Image
+            src="/images/values/value2.webp"
+            alt="Values"
+            width={1192}
+            height={678}
+            sizes="(min-width: 1280px) 592px, (min-width: 768px) 342px"
+          ></Image>
         </li>
         <li className={css.values__item}>
           <div className={css.value__card}>
