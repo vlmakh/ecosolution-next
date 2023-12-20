@@ -9,6 +9,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { useRef } from "react";
 import useMediaQuery from "@/hooks/useMediaQuery";
 import { useState } from "react";
+import Image from "next/image";
 
 export const Cases = () => {
   const isMobileScreen = useMediaQuery("(max-width: 767px)");
@@ -69,7 +70,14 @@ export const Cases = () => {
           {cases.map((image, idx) => (
             <div className={css.card__wrap} key={idx}>
               <div className={css.card}>
-                <picture>
+                <Image
+                  src={`/images/cases/${image.srcName}.webp`}
+                  alt="Values"
+                  width={1192}
+                  height={592}
+                  sizes="(min-width: 1280px) 596px, (min-width: 768px) 342px, 320px"
+                ></Image>
+                {/* <picture>
                   <source
                     srcSet={`/images/cases/mob_${image.srcName}.jpg`}
                     media="(max-width: 767px)"
@@ -92,7 +100,7 @@ export const Cases = () => {
                     width="100%"
                     height={168}
                   />
-                </picture>
+                </picture> */}
 
                 <div className={css.name__wrap}>
                   <p className={css.card__name}>{image.name}</p>
