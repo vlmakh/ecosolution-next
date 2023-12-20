@@ -35,12 +35,11 @@ export const Main = () => {
 
       <div className={css.thumb}>
         <Image
-          srcSet="/images/main/main_mob.jpg 320w, /images/main/main_tab.jpg 708w, /images/main/main_dsk.jpg 1240w"
-          src="/images/main/main_dsk.jpg"
-          alt="ecosolution"
-          width="1240"
-          height="524"
-          // sizes="(min-width: 1280px) 1240px, (min-width: 768px) 708px, 320px"
+          src="/images/main/main_dsk@2x.webp"
+          alt="Windmill"
+          width={1240}
+          height={524}
+          sizes="(min-width: 1280px) 1240px, (min-width: 768px) 708px, 320px"
           priority={true}
         />
       </div>
