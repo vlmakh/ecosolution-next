@@ -1,13 +1,15 @@
 ## Ecosolution
 
-Landing page according to technical task
+# Landing page according to technical task
 
-## Technical stack
-
-- Next.js
-- Sass
-
-## Description
-
-- Adaptive layout (480px, 7868px, 1280px)
+- Responsive layout under 480px
+- Adaptive layout (480px, 768px, 1280px)
 - Mobile-first development
+- Retina display support
+- Slider for Cases block
+- Active counter of provided electricity
+
+# Development stack
+
+- Next.js 14
+- Sass
