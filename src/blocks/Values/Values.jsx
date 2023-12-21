@@ -30,6 +30,7 @@ export const Values = () => {
             </h3>
             <p>to the world, people, new ideas and projects</p>
           </div>
+
           <div className={css.value__card}>
             <h3 className={css.value__name}>
               <TbWorldCheck size="16" /> Responsibility
@@ -40,6 +41,7 @@ export const Values = () => {
             </p>
           </div>
         </li>
+
         <li className={css.values__item}>
           <Image
             src="/images/values/value1.webp"
@@ -49,6 +51,7 @@ export const Values = () => {
             sizes="(min-width: 1280px) 592px, (min-width: 768px) 342px"
           ></Image>
         </li>
+
         <li className={css.values__item}>
           <Image
             src="/images/values/value2.webp"
@@ -58,6 +61,7 @@ export const Values = () => {
             sizes="(min-width: 1280px) 592px, (min-width: 768px) 342px"
           ></Image>
         </li>
+
         <li className={css.values__item}>
           <div className={css.value__card}>
             <h3 className={css.value__name}>
@@ -67,6 +71,7 @@ export const Values = () => {
               we use the latest technology to implement non-standard solutions
             </p>
           </div>
+
           <div className={css.value__card}>
             <h3 className={css.value__name}>
               <FaRankingStar size="16" /> Quality
