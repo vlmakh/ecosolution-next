@@ -1,10 +1,9 @@
 "use client";
 
 import css from "./TheHeader.module.scss";
-import { FiMenu } from "react-icons/fi";
-import { IoMdArrowRoundDown } from "react-icons/io";
 import { useState, useEffect } from "react";
-import Image from "next/image";
+import { Logo } from "@/components/Logo/Logo";
+import { Nav } from "@/components/Nav/Nav";
 import Modal from "@/components/Modal/Modal";
 import { BurgerMenu } from "@/components/BurgerMenu/BurgerMenu";
 
@@ -35,32 +34,9 @@ export const TheHeader = () => {
       }}
     >
       <div className={css.header__cont}>
-        <a className={css.logoLink} href="#" aria-label="Logo">
-          <Image
-            src="/images/eco_logo.png"
-            alt="ecosolution"
-            width="269"
-            height="40"
-          />
-        </a>
+        <Logo />
 
-        <nav className={css.nav}>
-          <button
-            className={css.menu}
-            type="button"
-            onClick={toggleMenu}
-            aria-label="Menu"
-          >
-            <FiMenu size={16} />
-          </button>
-
-          <a className={css.getInTouch} href="#contactus">
-            Get in touch
-            <span className={css.round}>
-              <IoMdArrowRoundDown size={12} />
-            </span>
-          </a>
-        </nav>
+        <Nav toggleMenu={toggleMenu} />
       </div>
 
       {showMenu && (

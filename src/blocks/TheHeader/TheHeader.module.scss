@@ -1,4 +1,3 @@
-@import "@/styles/_placeholders";
 @import "@/styles/_variables";
 
 .header {
@@ -30,57 +29,4 @@
   @media (min-width: 1280px) {
     max-width: 1280px;
   }
-}
-
-.logoLink {
-  width: 269px;
-
-  &:hover, &:focus {
-    color: $color-accent;
-  }
-}
-
-.nav {  
-  display: flex;
-}
-
-.menu {
-  display: inline-grid;
-  place-items: center;
-  width: 40px;
-  height: 40px;
-  padding: 0;
-  background-color: #dcefd8;
-  border-radius: 50%;
-  border: none;
-  color: #292d32;
-  cursor: pointer;
-
-  transition: background-color $duration $timing-function;
-
-  &:hover,
-  &:focus {
-    background-color: $color-accent;
-  }
-}
-
-.getInTouch {
-  @extend %buttonLink;
-
-  margin-top: 0;
-  margin-left: 12px;
-
-  @media (max-width: 767.98px) {
-    display: none;
-  }
-}
-
-.round {
-  width: 14px;
-  height: 14px;
-  background-color: $color-main;
-  border-radius: 50%;
-  color: $color-main;
-  display: grid;
-  place-content: center;
 }

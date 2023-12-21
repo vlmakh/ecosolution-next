@@ -1,0 +1,10 @@
+@import "@/styles/_variables";
+
+.logoLink {
+  width: 269px;
+
+  &:hover,
+  &:focus {
+    color: $color-accent;
+  }
+}
