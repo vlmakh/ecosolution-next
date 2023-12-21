@@ -34,9 +34,13 @@
 
 .logoLink {
   width: 269px;
+
+  &:hover, &:focus {
+    color: $color-accent;
+  }
 }
 
-.nav {
+.nav {  
   display: flex;
 }
 

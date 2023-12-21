@@ -35,7 +35,7 @@ export const TheHeader = () => {
       }}
     >
       <div className={css.header__cont}>
-        <a className={css.logoLink} href="#">
+        <a className={css.logoLink} href="#" aria-label="Logo">
           <Image
             src="/images/eco_logo.png"
             alt="ecosolution"
@@ -43,6 +43,7 @@ export const TheHeader = () => {
             height="40"
           />
         </a>
+
         <nav className={css.nav}>
           <button
             className={css.menu}
