@@ -2,6 +2,9 @@
 
 .logoLink {
   width: 269px;
+  color: $color-main;
+
+  transition: color $duration $timing-function;
 
   &:hover,
   &:focus {
